@@ -49,10 +49,10 @@ def get_weather(region):
     weather = '白天'+response['HeWeather6'][0]["daily_forecast"][0]["cond_txt_d"]+'，'+'傍晚'+response['HeWeather6'][0]["daily_forecast"][0]["cond_txt_n"]
     # 当前温度
     temp = response['HeWeather6'][0]["daily_forecast"][0]["tmp_min"]+ u"\N{DEGREE SIGN}" + "C"+'—'+response['HeWeather6'][0]["daily_forecast"][0]["tmp_max"]+ u"\N{DEGREE SIGN}" + "C"
-    if int(response['HeWeather6'][0]["daily_forecast"][0]["tmp_min"]) <= 25:
-        xigua = "天气变凉啦，多穿点衣服哦~"
+    if int(response['HeWeather6'][0]["daily_forecast"][0]["tmp_min"]) <= 15:
+        xigua = "天气变凉啦，多加一点衣服~"
     else:
-        xigua = "今天又是很想你的一天~"
+        xigua = "今天又又又又又超级想你~"
     # 风向
     wind_dir = response['HeWeather6'][0]["daily_forecast"][0]["wind_dir"]
     return weather, temp, wind_dir, xigua

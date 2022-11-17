@@ -50,7 +50,7 @@ def get_weather(region):
     # 当前温度
     temp = response['HeWeather6'][0]["daily_forecast"][0]["tmp_min"]+ u"\N{DEGREE SIGN}" + "C"+'—'+response['HeWeather6'][0]["daily_forecast"][0]["tmp_max"]+ u"\N{DEGREE SIGN}" + "C"
     if int(response['HeWeather6'][0]["daily_forecast"][0]["tmp_min"]) <= 15:
-        xigua = "天气变凉啦，多加一点衣服~"
+        xigua = "日常提醒宝贝多加一点衣服~"
     else:
         xigua = "今天又又又又又超级想你~"
     # 风向
